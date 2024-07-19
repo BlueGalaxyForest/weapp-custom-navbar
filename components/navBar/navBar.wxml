@@ -1,0 +1,9 @@
+<view class="navbar" style="height:{{navHeight}}px">
+<!-- occupy为占位,把状态栏高度和留白高度霸占 -->
+  <view class="occupy" 
+  style="height: {{windowInfo.statusBarHeight+padding1}}px;"></view>
+  你的任意发挥空间...
+</view>
+
+<!-- 测试打印,可删除 -->
+<button type="primary" bind:tap="print">测试打印</button>

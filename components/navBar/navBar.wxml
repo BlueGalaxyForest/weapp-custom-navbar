@@ -1,9 +1,14 @@
 <view class="navbar" style="height:{{navHeight}}px">
-<!-- occupy为占位,把状态栏高度和留白高度霸占 -->
-  <view class="occupy" 
-  style="height: {{windowInfo.statusBarHeight+padding1}}px;"></view>
-  你的任意发挥空间...
+  <!-- occupy为占位,把状态栏高度和留白高度霸占 -->
+  <view class="occupy-h" style="height: {{windowInfo.statusBarHeight+paddingTop}}px;"></view>
+  <view class="normal" style="width: {{navWidth}}px;height: {{capsuleInfo.height}}px;line-height:{{capsuleInfo.height}}px;;">
+    <view class="occupy-w" style="width: {{capsuleInfo.width+paddingRight}}px;">
+      <image wx:if="{{pages.length>1}}" bind:tap="toPrePage" class="img" src="/images/back.png" mode="" />
+      <image wx:else class="img" bind:tap="toHome" src="/images/home.png" mode="" />
+    </view>
+    <view class="text">测试标题</view>
+  </view>
 </view>
 
 <!-- 测试打印,可删除 -->
-<button type="primary" bind:tap="print">测试打印</button>
+<!-- <button type="primary" bind:tap="print">测试打印</button> -->
